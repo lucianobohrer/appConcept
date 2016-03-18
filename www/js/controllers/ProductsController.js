@@ -15,7 +15,7 @@ angular.module('app').controller('ProductsController', function($scope, $http){
         console.log(data.token);
         serviceToCall(data.token);
       })
-      .error(function(data){
+      .error(function(error){
         alert(error.message);
       });
   };
@@ -28,7 +28,7 @@ angular.module('app').controller('ProductsController', function($scope, $http){
       .success(function(data){
           $scope.arrProds = data;
       })
-      .error(function(data){
+      .error(function(error){
         alert(error.message);
       });
     };
